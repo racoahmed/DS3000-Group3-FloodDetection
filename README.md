@@ -32,9 +32,6 @@ https://www.kaggle.com/datasets/rhythmroy/sen12flood-flood-detection-dataset
 - `results/`  
   Saved figures and tables generated from the notebook (e.g., model comparison plots).
 
-- `models/`  
-  Optional: saved trained model weights or checkpoints.
-
 - `requirements.txt`  
   Python dependencies used in this project.
 
@@ -47,14 +44,23 @@ https://www.kaggle.com/datasets/rhythmroy/sen12flood-flood-detection-dataset
    - Go to **Google Colab → File → Open notebook → GitHub**
    - Enter this repository URL:  
      `https://github.com/racoahmed/DS3000-Final-Project`
-   - Open `notebook/main.ipynb` (once it exists).
+   - Open `notebook/main.ipynb`
 
 2. Download and unzip the SEN12FLOOD dataset into your Google Drive.
 
-3. In `main.ipynb`, update the **data loading section** to point to the correct
-   dataset path in your Drive and construct:
-   - `X`: NumPy array of images, shape `(n_samples, H, W, C)`
-   - `y`: NumPy array of labels, shape `(n_samples,)` (0 = no flood, 1 = flood)
+3. **Mount Google Drive and set the dataset path**
+
+   In the first code cell of the notebook, run:
+
+   python
+   from google.colab import drive
+   drive.mount('/content/drive')
+
+   Make sure the SEN12FLOOD data is located at:
+   `/content/drive/MyDrive/DS3000 Final Project/archive/SEN12FLOOD`
+
+   If it is in a different folder, update the configuration line in the notebook:
+   `DATASET_PATH = '/content/drive/MyDrive/DS3000 Final Project/archive/SEN12FLOOD`
 
 4. Run all cells (**Runtime → Run all**). The notebook will train:
    - Logistic Regression

@@ -39,7 +39,7 @@ https://www.kaggle.com/datasets/rhythmroy/sen12flood-flood-detection-dataset
   Python dependencies used in this project.
 
 > **Note:** The SEN12FLOOD dataset is **not** stored in this repository due to size.
-> You must download it separately from Kaggle.
+> It must be downloaded separately from Kaggle.
 
 ## How to Run the Notebook
 
